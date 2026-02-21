@@ -1,6 +1,8 @@
 import sys
 import os
 
+# можно вот так вызвать python files_sort.py './'
+
 if __name__ == '__main__':
     directory = sys.argv[1]
 

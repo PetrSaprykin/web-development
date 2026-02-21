@@ -1,3 +1,4 @@
+# декоратор тут добавляет по сути нормализацию номер перед юзанием дефолтной сортировки
 def wrapper(f):
     def fun(l):
         normalized = []
@@ -12,9 +13,10 @@ def wrapper(f):
         return f(formatted)
     return fun
 
-@wrapper
+
 def sort_phone(l):
     return sorted(l)
+sort_phone = wrapper(sort_phone)
 
 if __name__ == '__main__':
     l = [input() for _ in range(int(input()))]
