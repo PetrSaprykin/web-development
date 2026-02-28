@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div class="row justify-content-center my-5">
+  <div class="col-lg-10">
+    <h1 class="mb-4">Заголовки запроса (request.headers)</h1>
+    <div class="data-card mb-4">
+      <h3>Все заголовки</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Заголовок</th>
+            <th>Значение</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key, value in headers %}
+          <tr>
+            <td><strong>{{ key }}</strong></td>
+            <td class="header-value">{{ value }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
